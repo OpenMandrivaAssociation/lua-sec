@@ -13,6 +13,7 @@ URL:            http://www.inf.puc-rio.br/~brunoos/luasec/
 Source0:        http://luaforge.net/frs/download.php/4013/%{oname}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  lua >= %{luaver}, lua-devel >= %{luaver}
+BuildRequires:  openssl-devel 
 Requires:       lua >= %{luaver}
 Requires:       lua-socket
 %description
