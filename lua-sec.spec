@@ -4,13 +4,13 @@
 %define oname luasec
 
 Name:           lua-sec
-Version:        0.3.1
+Version:        0.4
 Release:        %mkrel 1
 Summary:        OpenSSL binding for Lua
 Group:          Development/Other
 License:        MIT
 URL:            http://www.inf.puc-rio.br/~brunoos/luasec/
-Source0:        http://luaforge.net/frs/download.php/4013/%{oname}-%{version}.tar.gz
+Source0:        http://luaforge.net/frs/download.php/4255/%{oname}-%{version}.tar.gz
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  lua >= %{luaver}, lua-devel >= %{luaver}
 BuildRequires:  openssl-devel 
@@ -34,7 +34,7 @@ a secure TLS/SSL session.
 %install
 rm -rf %{buildroot}
 mkdir -p $RPM_BUILD_ROOT%{lualibdir} $RPM_BUILD_ROOT%{luapkgdir}
-make install CPATH=$RPM_BUILD_ROOT%{lualibdir} LUAPATH=$RPM_BUILD_ROOT%{luapkgdir}
+make install LUACPATH=$RPM_BUILD_ROOT%{lualibdir} LUAPATH=$RPM_BUILD_ROOT%{luapkgdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
