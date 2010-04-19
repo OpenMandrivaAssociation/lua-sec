@@ -5,17 +5,19 @@
 
 Name:           lua-sec
 Version:        0.4
-Release:        %mkrel 1
+Release:        %mkrel 2
 Summary:        OpenSSL binding for Lua
 Group:          Development/Other
 License:        MIT
 URL:            http://www.inf.puc-rio.br/~brunoos/luasec/
 Source0:        http://luaforge.net/frs/download.php/4255/%{oname}-%{version}.tar.gz
+Patch0:		luasec-0.4-fix-link.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
 BuildRequires:  lua >= %{luaver}, lua-devel >= %{luaver}
 BuildRequires:  openssl-devel 
 Requires:       lua >= %{luaver}
 Requires:       lua-socket
+
 %description
 LuaSec is a binding for OpenSSL library to provide TLS/SSL communication. 
 This version delegates to LuaSocket the TCP connection establishment 
@@ -25,6 +27,7 @@ a secure TLS/SSL session.
 
 %prep
 %setup -q -n %{oname}-%{version}
+%patch0 -p0
 
 %build
 #perl -pi -e 's/(CFLAGS =)/$1 -fPIC/' config
