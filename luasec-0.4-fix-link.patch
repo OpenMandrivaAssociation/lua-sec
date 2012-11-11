@@ -1,0 +1,11 @@
+--- src/Makefile.link	2010-04-19 11:36:26.000000000 +0200
++++ src/Makefile	2010-04-19 11:36:31.000000000 +0200
+@@ -9,7 +9,7 @@
+  context.o \
+  ssl.o
+ 
+-LIBS=-lssl -lcrypto
++LIBS=-lssl -lcrypto -llua
+ 
+ WARN=-Wall -pedantic
+ 
