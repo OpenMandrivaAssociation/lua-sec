@@ -48,3 +48,24 @@ rm -rf $RPM_BUILD_ROOT
 %doc CHANGELOG samples/*
 %{lualibdir}/*
 %{luapkgdir}/*
+
+
+%changelog
+* Mon Dec 06 2010 Oden Eriksson <oeriksson@mandriva.com> 0.4-3mdv2011.0
++ Revision: 612781
+- the mass rebuild of 2010.1 packages
+
+* Mon Apr 19 2010 Funda Wang <fwang@mandriva.org> 0.4-2mdv2010.1
++ Revision: 536627
+- link against lua 5.1
+
+* Tue Feb 02 2010 Rémy Clouard <shikamaru@mandriva.org> 0.4-1mdv2010.1
++ Revision: 499821
+- update to 0.4
+
+* Fri May 01 2009 Michael Scherer <misc@mandriva.org> 0.3.1-1mdv2010.0
++ Revision: 369964
+- add BuildRequires
+- import lua-sec
+
+
