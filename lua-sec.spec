@@ -13,6 +13,7 @@ URL:            https://www.inf.puc-rio.br/~brunoos/luasec/
 Source0:        http://luaforge.net/frs/download.php/4255/%{oname}-%{version}.tar.gz
 Patch0:		luasec-0.4-fix-link.patch
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-buildroot
+BuildRequires:	make
 BuildRequires:  lua >= %{luaver}, lua-devel >= %{luaver}
 BuildRequires:  openssl-devel 
 Requires:       lua >= %{luaver}
